@@ -5,112 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>採用向けランディングページ | クリエイター採用</title>
   <meta name="description" content="クリエイターと共に成長する会社の採用向けランディングページ。ミッション、カルチャー、メンバーインタビュー、募集職種、応募方法を掲載。" />
-  <meta name="theme-color" content="#0ea5e9" />
-  <!-- OG / Twitter -->
+  <meta name="theme-color" content="#ffffff" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="採用向けランディングページ | クリエイター採用" />
-  <meta property="og:description" content="クリエイターと共に成長する会社の採用サイト。ミッション、カルチャー、メンバー、募集職種を掲載。" />
+  <meta property="og:description" content="ミッション、カルチャー、メンバー、募集職種、FAQを掲載した採用LPテンプレート。" />
   <meta property="og:image" content="https://placehold.co/1200x630/png" />
   <meta name="twitter:card" content="summary_large_image" />
   <style>
-    /* ===== CSSリセット（最小限） ===== */
-    *,*::before,*::after{box-sizing:border-box}html,body{margin:0;padding:0}img{max-width:100%;display:block}
+    /* ===== Base reset ===== */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    img{max-width:100%;display:block}
 
     :root{
-      --bg: #0b1220;            /* 背景(濃紺) */
-      --card: #0f172a;          /* カード背景 */
-      --elev: #111827;          /* さらに濃い面 */
-      --text: #e5e7eb;          /* 本文 */
-      --muted: #9ca3af;         /* 補助テキスト */
-      --brand: #38bdf8;         /* シアン */
-      --brand-2: #a78bfa;       /* ラベンダー */
-      --accent: #34d399;        /* アクセント(緑) */
-      --alert: #f43f5e;         /* 強調(赤) */
+      --bg: #ffffff;
+      --card: #f9fafb;
+      --elev: #f3f4f6;
+      --text: #111827;
+      --muted: #6b7280;
+      --brand: #2563eb; /* blue-600 */
+      --brand-2: #7c3aed; /* violet-600 */
+      --accent: #059669; /* emerald-600 */
       --radius: 18px;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --shadow-soft: 0 6px 18px rgba(0,0,0,.25);
+      --shadow: 0 4px 20px rgba(0,0,0,.08);
+      --shadow-soft: 0 2px 10px rgba(0,0,0,.06);
       --maxw: 1120px;
     }
 
-    body{font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif; background: radial-gradient(1200px 600px at 10% -10%, #0b152c, transparent 60%), linear-gradient(180deg, #0b1220 0%, #0b1220 100%); color: var(--text); line-height: 1.7}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
     a{color: var(--brand)}
 
-    /* ===== レイアウトユーティリティ ===== */
+    /* Layout */
     .container{max-width: var(--maxw);margin:0 auto;padding:0 20px}
     .grid{display:grid;gap:24px}
     @media (min-width: 768px){
       .grid-2{grid-template-columns: 1.1fr .9fr}
       .grid-3{grid-template-columns: repeat(3,1fr)}
-      .grid-4{grid-template-columns: repeat(4,1fr)}
     }
 
-    .card{background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); box-shadow: var(--shadow-soft); backdrop-filter: blur(6px)}
+    .card{background: var(--card); border: 1px solid #e5e7eb; border-radius: var(--radius); box-shadow: var(--shadow-soft)}
     .section{padding:72px 0}
     .section-sm{padding:48px 0}
     .title{font-size: clamp(28px, 4vw, 42px); line-height:1.2; margin:0 0 10px}
-    .subtitle{font-size:clamp(18px, 2vw, 20px); color: var(--muted); margin:0 0 28px}
-    .kicker{display:inline-block; padding:6px 12px; background: linear-gradient(90deg, rgba(56,189,248,.25), rgba(167,139,250,.25)); border:1px solid rgba(255,255,255,.1); border-radius:999px; font-size:12px; letter-spacing:.08em; text-transform:uppercase}
+    .subtitle{font-size:clamp(16px, 2vw, 20px); color: var(--muted); margin:0 0 28px}
+    .kicker{display:inline-block; padding:6px 12px; background: #eef2ff; border-radius:999px; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color: var(--brand)}
 
-    /* ===== ヘッダー ===== */
-    header{position:sticky; top:0; z-index:20; backdrop-filter: blur(10px); background: rgba(11,18,32,.6); border-bottom:1px solid rgba(255,255,255,.06)}
+    /* Header */
+    header{position:sticky; top:0; z-index:20; background: #ffffff; border-bottom:1px solid #e5e7eb}
     .nav{display:flex; align-items:center; justify-content:space-between; gap:12px; height:62px}
     .brand{display:flex; align-items:center; gap:10px}
-    .logo{width:28px; height:28px; border-radius:6px; background: conic-gradient(from 180deg at 50% 50%, var(--brand), var(--brand-2), var(--accent), var(--brand)); box-shadow: 0 0 30px rgba(56,189,248,.35)}
+    .logo{width:28px; height:28px; border-radius:6px; background: var(--brand)}
     .nav a{color:var(--text); text-decoration:none; opacity:.9}
     .nav a:hover{opacity:1}
+    .hide-mobile{display:none}
+    @media (min-width:768px){.hide-mobile{display:block}}
 
-    .cta{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:14px; border:1px solid rgba(255,255,255,.1); text-decoration:none; color:var(--text); background: linear-gradient(180deg, rgba(56,189,248,.15), rgba(167,139,250,.12)); box-shadow: var(--shadow-soft)}
-    .cta .dot{width:8px;height:8px;border-radius:999px;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+    .cta{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:14px; border:1px solid #e5e7eb; text-decoration:none; color:var(--text); background: #f3f4f6; box-shadow: var(--shadow-soft)}
+    .cta .dot{width:8px;height:8px;border-radius:999px;background:var(--accent)}
 
-    /* ===== ヒーロー ===== */
+    /* Hero */
     .hero{position:relative; padding: 72px 0 40px}
     .hero h1{font-size: clamp(34px, 5vw, 56px); line-height:1.08; margin:.2em 0}
     .hero p{font-size:clamp(16px, 2.2vw, 20px); color: var(--muted)}
-    .hero-visual{position:relative; height: 360px; border-radius: 24px; overflow:hidden; border:1px solid rgba(255,255,255,.08); box-shadow: var(--shadow); background: radial-gradient(120% 90% at 70% 20%, rgba(56,189,248,.25), transparent), linear-gradient(180deg, #0f172a, #0b1220)}
-    .hero-visual::after{content:""; position:absolute; inset:0; background: url('https://placehold.co/1200x600/png') center/cover; mix-blend: screen; opacity:.35}
-    .badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
-    .badge{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.12); color:var(--muted); background: rgba(255,255,255,.04)}
+    .hero-visual{position:relative; height: 360px; border-radius: 24px; overflow:hidden; border:1px solid #e5e7eb; box-shadow: var(--shadow); background: #f9fafb}
+    .hero-visual::after{content:""; position:absolute; inset:0; background: url('https://placehold.co/1200x600/png') center/cover; opacity:.95}
 
-    /* ===== 数字で見る ===== */
-    .metrics{display:grid; gap:14px; grid-template-columns: repeat(2,1fr)}
-    @media (min-width: 768px){ .metrics{grid-template-columns: repeat(4,1fr)} }
-    .metric{padding:18px; border-radius:16px; border:1px solid rgba(255,255,255,.08); background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015))}
-    .metric .num{font-size: clamp(26px,4vw,34px); font-weight:700}
-    .metric .cap{color: var(--muted)}
-
-    /* ===== セクション: ミッション & カルチャー ===== */
-    .pill{display:inline-block;padding:8px 12px;border:1px solid rgba(255,255,255,.12); border-radius:999px; color: var(--muted); font-size:12px}
+    /* Mission / Culture */
     .list{display:grid; gap:12px}
     .list li{display:flex; gap:12px; align-items:flex-start}
-    .list i{display:inline-block; width:22px; height:22px; border-radius:6px; background: linear-gradient(180deg, var(--brand), var(--brand-2)); box-shadow: 0 0 16px rgba(56,189,248,.25)}
+    .list i{display:inline-block; width:22px; height:22px; border-radius:6px; background: var(--brand)}
 
-    /* ===== インタビュー ===== */
-    .member{display:grid; gap:14px; grid-template-columns: 96px 1fr; align-items:center; padding:16px; border-radius:16px; background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.08)}
-    .avatar{width:96px;height:96px;border-radius:14px; background: url('https://placehold.co/200x200/png') center/cover; border:1px solid rgba(255,255,255,.1)}
-    .quote{font-size:16px; color:#eaf2ff}
+    /* Interviews */
+    .member{display:grid; gap:14px; grid-template-columns: 96px 1fr; align-items:center; padding:16px; border-radius:16px; background: var(--card); border:1px solid #e5e7eb}
+    .avatar{width:96px;height:96px;border-radius:14px; background: url('https://placehold.co/200x200/png') center/cover; border:1px solid #e5e7eb}
+    .quote{font-size:16px; color:var(--text)}
 
-    /* ===== 募集職種 ===== */
-    .job{padding:18px; border-radius:16px; border:1px solid rgba(255,255,255,.08); background: linear-gradient(180deg, rgba(56,189,248,.06), rgba(167,139,250,.05))}
+    /* Jobs */
+    .job{padding:18px; border-radius:16px; border:1px solid #e5e7eb; background: var(--card)}
     .job .title{font-size:20px}
-    .tag{display:inline-block; padding:4px 8px; border-radius:999px; border:1px solid rgba(255,255,255,.15); font-size:12px; color: var(--muted); margin-right:6px}
+    .tag{display:inline-block; padding:4px 8px; border-radius:999px; border:1px solid #e5e7eb; font-size:12px; color: var(--muted); margin-right:6px}
 
-    /* ===== FAQ ===== */
-    .faq-item{border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:14px 16px; background: rgba(255,255,255,.03)}
+    /* FAQ */
+    .faq-item{border:1px solid #e5e7eb; border-radius:14px; padding:14px 16px; background: #f9fafb}
     .faq-q{display:flex; justify-content:space-between; gap:12px; cursor:pointer; font-weight:600}
     .faq-a{max-height:0; overflow:hidden; transition:max-height .35s ease; color: var(--muted)}
-    .faq-item.open .faq-a{max-height:200px}
+    .faq-item.open .faq-a{max-height:240px}
 
-    /* ===== フッター ===== */
-    footer{padding:32px 0; color: var(--muted); border-top:1px solid rgba(255,255,255,.06)}
+    /* Footer */
+    footer{padding:32px 0; color: var(--muted); border-top:1px solid #e5e7eb}
 
-    /* ===== アニメーション ===== */
+    /* Animation */
     .reveal{opacity:0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease}
     .reveal.is-visible{opacity:1; transform: none}
   </style>
 </head>
 <body>
-  <!-- ===== ヘッダー ===== -->
+  <!-- Header -->
   <header>
     <div class="container nav">
       <div class="brand">
@@ -132,7 +130,7 @@
     </div>
   </header>
 
-  <!-- ===== ヒーロー ===== -->
+  <!-- Hero -->
   <section class="hero container section">
     <span class="kicker">We grow with creators</span>
     <h1 class="reveal">創る人のとなりで、<br/>社会を動かす。</h1>
@@ -140,36 +138,13 @@
 
     <div class="grid grid-2" style="margin-top:24px">
       <div class="reveal">
-        <div class="badges">
-          <span class="badge">フレックス / リモート可</span>
-          <span class="badge">副業可</span>
-          <span class="badge">学習支援</span>
-          <span class="badge">育休推奨</span>
-        </div>
-        <div class="metrics" style="margin-top:16px">
-          <div class="metric">
-            <div class="num">87%</div>
-            <div class="cap">クリエイター出身メンバー</div>
-          </div>
-          <div class="metric">
-            <div class="num">4.6★</div>
-            <div class="cap">従業員満足 (社内調査)</div>
-          </div>
-          <div class="metric">
-            <div class="num">15 → 60名</div>
-            <div class="cap">直近3年での組織拡大</div>
-          </div>
-          <div class="metric">
-            <div class="num">120万+</div>
-            <div class="cap">支援した制作物の累計DL</div>
-          </div>
-        </div>
+        <p class="subtitle" style="margin:0">フレックス / リモート可・副業可・学習支援・育休推奨</p>
       </div>
-      <div class="hero-visual reveal" aria-hidden="true"></div>
+      <div class="hero-visual reveal" aria-hidden="true" role="img" aria-label="チームのイメージ写真"></div>
     </div>
   </section>
 
-  <!-- ===== ミッション & カルチャー ===== -->
+  <!-- Mission / Culture -->
   <section id="mission" class="section">
     <div class="container grid grid-2">
       <div>
@@ -182,19 +157,10 @@
           <li><i></i><div><strong>越境と共創</strong><br/><span class="muted">職能の壁を越え、職種混成のチームで成果を出す。</span></div></li>
         </ul>
       </div>
-      <div class="card" style="padding:20px">
-        <p class="pill">働き方の特徴</p>
-        <ul class="list" style="margin-top:10px">
-          <li><i></i><div><strong>リモートハイブリッド</strong><br/>出社/在宅をチームで選択。</div></li>
-          <li><i></i><div><strong>副業/兼業OK</strong><br/>外の刺激を歓迎。</div></li>
-          <li><i></i><div><strong>学習・登壇支援</strong><br/>書籍/カンファ/資格を補助。</div></li>
-          <li><i></i><div><strong>育児・介護フレンドリー</strong><br/>柔軟な時間設計で両立支援。</div></li>
-        </ul>
-      </div>
     </div>
   </section>
 
-  <!-- ===== メンバーインタビュー ===== -->
+  <!-- Interviews -->
   <section id="interviews" class="section">
     <div class="container">
       <span class="kicker">Voices</span>
@@ -225,7 +191,7 @@
     </div>
   </section>
 
-  <!-- ===== 募集職種 ===== -->
+  <!-- Jobs -->
   <section id="jobs" class="section">
     <div class="container">
       <span class="kicker">Open Positions</span>
@@ -274,7 +240,7 @@
     </div>
   </section>
 
-  <!-- ===== 応募動線 ===== -->
+  <!-- Apply -->
   <section id="apply" class="section-sm">
     <div class="container card" style="padding:20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap">
       <div>
@@ -282,14 +248,13 @@
         <p class="subtitle" style="margin:0">まずはカジュアルにお話しましょう。履歴書不要です。</p>
       </div>
       <div style="display:flex; gap:10px; flex-wrap:wrap">
-        <!-- mailto はそのままでもOK。Googleフォーム等のURLに変えても良い -->
-        <a class="cta" href="mailto:recruit@example.com?subject=%E3%80%90%E3%82%AB%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E9%9D%A2%E8%AB%87%E5%B8%8C%E6%9C%9B%E3%80%91" rel="nofollow">メールで連絡</a>
+        <a class="cta" href="mailto:recruit@example.com?subject=%E3%80%90%E3%82%AB%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E9%9D%A2%E8%AB%87%E5%B8%8C%E6%9C%9B%E3%80%91">メールで連絡</a>
         <a class="cta" href="#" onclick="alert('ここに応募フォームのURLを設定してください');return false;">応募フォーム</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== FAQ ===== -->
+  <!-- FAQ -->
   <section id="faq" class="section">
     <div class="container">
       <span class="kicker">FAQ</span>
@@ -311,7 +276,7 @@
     </div>
   </section>
 
-  <!-- ===== フッター ===== -->
+  <!-- Footer -->
   <footer>
     <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
       <small>© <span id="year"></span> Your Company, Inc.</small>
@@ -321,20 +286,21 @@
 
   <script>
     // 年号
-    document.getElementById('year').textContent = new Date().getFullYear()
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // FAQ アコーディオン
     document.querySelectorAll('.faq-item').forEach($item => {
-      $item.querySelector('.faq-q').addEventListener('click', () => {
-        $item.classList.toggle('open')
-      })
-    })
+      const q = $item.querySelector('.faq-q');
+      q.addEventListener('click', () => {
+        $item.classList.toggle('open');
+      });
+    });
 
     // スクロール出現アニメーション
     const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-visible') } })
-    },{threshold:.15})
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el))
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    },{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
 </body>
 </html>
